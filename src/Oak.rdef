@@ -1,0 +1,19 @@
+
+resource app_signature "application/x-vnd.Be-FlyingTroll";
+
+resource file_types message {
+	"types" = "text/html",
+	"types" = "text/plain",
+	"types" = "application/x-vnd.Be-bookmark"
+};
+
+resource app_version {
+	major  = 0,
+	middle = 0,
+	minor  = 1,
+
+	variety = B_APPV_DEVELOPMENT,
+	internal = 0
+};
+
+resource app_flags B_MULTIPLE_LAUNCH;

@@ -19,6 +19,7 @@
 #include <TextView.h>
 #include <Cursor.h>
 #include <MessageRunner.h>
+#include <PopUpMenu.h>
 
 #include "Constants.h"
 #include "FTConstants.h"
