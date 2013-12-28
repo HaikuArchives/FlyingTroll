@@ -2,10 +2,9 @@
 
 #include <Box.h>
 
-FTView::FTView( BRect r, const char *name, uint32 rmode,
-	bool pan = false, bool st = false,
-	bool scroll = false ) :
-	BView(r, name, rmode, B_WILL_DRAW | B_FRAME_EVENTS)
+FTView::FTView( BRect rect, const char *name, uint32 rmode,
+	bool pan, bool st, bool scroll) :
+	BView(rect, name, rmode, B_WILL_DRAW | B_FRAME_EVENTS)
 {
 	show_panel = pan;
 	show_statusbar = st;
@@ -195,7 +194,7 @@ void FTView::SetAddress( const char* s )
 		address->SetText(s);
 }
 
-void FTView::SetStatus( const char* s, int num = 0 )
+void FTView::SetStatus( const char* s, int num )
 {
 	if (show_statusbar && num == 0)
 	{
@@ -213,7 +212,7 @@ const char *FTView::Address( )
 		return "";
 }
 
-void FTView::SetBars( const int vmax, const int hmax, bool init = false, int pos = 0 )
+void FTView::SetBars( const int vmax, const int hmax, bool init, int pos )
 {
 	int k, k2;
 	float pr1, pr2;

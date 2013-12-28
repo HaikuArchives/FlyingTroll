@@ -12,7 +12,7 @@
 status_t ReadAttributes(const char *path,
 	BMessage& attrData);
 
-bool SetFamily( BFont *font, const char *s, bool prim = true )
+bool SetFamily( BFont *font, const char *s, bool prim )
 {
 	//return false; // Poka chto ne ponyal, kak ih vybirat' :-(
 
@@ -2722,8 +2722,7 @@ status_t OakView::LoadURL( const char *url )
 	return B_OK;
 }
 
-status_t OakView::LoadFile( BMessage *message, const char *fname2 = NULL,
-	bool his = false )
+status_t OakView::LoadFile( BMessage *message, const char *fname2, bool his )
 {
 	entry_ref ref;
 	status_t err;
@@ -3341,7 +3340,7 @@ int OakView::HistoryPos()
 	return pos_history;
 }
 
-void OakView::Back( int to = 0 )
+void OakView::Back( int to )
 {
 	if (to == 0 && n_history - pos_history > 1)
 	{
@@ -3536,7 +3535,7 @@ void OakView::SelectAll()
 	MyDraw();
 }
 
-void OakView::Search( const char *s, bool again = false )
+void OakView::Search( const char *s, bool again )
 {
 	int32 i32;
 	int newvalue = -1;

@@ -7,7 +7,7 @@
 
 OakButton::OakButton( BRect r, const char *name,
 	BBitmap *b1, BBitmap *b2, BBitmap *b3, BMessage *message,
-	bool wm = false ) :
+	bool wm ) :
 	BButton(r, name, "", message, B_FOLLOW_RIGHT | B_FOLLOW_TOP)
 {
 	off = b1;

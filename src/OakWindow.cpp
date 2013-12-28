@@ -90,8 +90,8 @@ const char *GetUrlFromLink( const char *fname )
 		return "";
 }
 
-OakWindow::OakWindow( BRect r ) : BWindow(r, "",
-	B_DOCUMENT_WINDOW, B_QUIT_ON_WINDOW_CLOSE)
+OakWindow::OakWindow( BRect rect ) 
+	: BWindow(rect , "", B_DOCUMENT_WINDOW, B_QUIT_ON_WINDOW_CLOSE)
 {
 	//n_bookmarks = 0;
 

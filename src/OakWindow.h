@@ -39,7 +39,7 @@ private:
 	BRect oldframe;
 	BAlert *alert;
 public:
-	OakWindow( BRect r );
+	OakWindow( BRect rect );
 	virtual bool QuitRequested();
 	void UpdateBookmarks();
 	virtual void MessageReceived( BMessage *message );

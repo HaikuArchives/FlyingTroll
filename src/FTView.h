@@ -38,7 +38,7 @@ private:
 	OakButton *button_hback;
 	bool show_panel, show_statusbar, show_scroll;
 public:
-	FTView( BRect r, const char *name, uint32 rmode,
+	FTView( BRect rect, const char *name, uint32 rmode,
 		bool pan = false, bool st = false,
 		bool scroll = false );
 	virtual void FrameResized( float w, float h );
